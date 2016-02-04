@@ -1,0 +1,19 @@
+{
+  "name": "wrap-bdd",
+  "version": "1.0.0",
+  "description": "a behavior driven development framework for test complete projects and any other testing projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vivek Sashidharan <vsashidharan@foundationmedicine.com>",
+  "license": "MIT",
+  "dependencies": {
+    "browser-launcher2": "^0.4.6",
+    "xml2js": "^0.4.15"
+  },
+  "directories": {
+    "lib": "./lib"
+  },
+  "files": [ "features", "Utilities", "lib"]
+}
