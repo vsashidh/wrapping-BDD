@@ -1,5 +1,4 @@
 var driver = require('../../lib/index.js');
-var xfs = require('fs');
 
 function World() {
 
