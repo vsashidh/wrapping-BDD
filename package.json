@@ -2,7 +2,7 @@
   "name": "wrap-bdd",
   "version": "1.0.0",
   "description": "a behavior driven development framework for test complete projects and any other testing projects",
-  "main": "index.js",
+  "main": "lib/index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

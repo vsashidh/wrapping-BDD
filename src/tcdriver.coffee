@@ -14,9 +14,9 @@ module.exports = class tcdriver extends EventEmitter
 		if tool? then @testtool = tool else @testtool = 'TestComplete'
 
 #		Uncomment the following and compile using coffescript to debug any child process related issues.
-#		console.log 'cscript .\\Utilities\\atr.js '+ @testtool + ' "' + @projectSuite + '" /p:"' + @project + '" /s:"' + @fullmethodname + '" /exit /silentmode'
+#		console.log 'cscript ' + getParent(__dirname) + '\\Utilities\\atr.js '+ @testtool + ' "' + @projectSuite + '" /p:"' + @project + '" /s:"' + @fullmethodname + '" /silentmode'
 
-		atr = exec 'cscript .\\Utilities\\atr.js '+ @testtool + ' "' + @projectSuite + '" /p:"' + @project + '" /s:"' + @fullmethodname + '" /exit /silentmode',(error,stdoutBuffer,stderrBuffer) =>
+		atr = exec 'cscript ' + getParent(__dirname) + '\\Utilities\\atr.js '+ @testtool + ' "' + @projectSuite + '" /p:"' + @project + '" /s:"' + @fullmethodname + '" /silentmode',(error,stdoutBuffer,stderrBuffer) =>
 			bufStream = new stream.PassThrough
 			bufStream.end stdoutBuffer
 			rl = readline.createInterface {input: bufStream}
@@ -46,3 +46,7 @@ module.exports = class tcdriver extends EventEmitter
 	testresult: (cb)->	
 		cb @result
 		return
+
+	getParent = (path) ->
+		parentId = path.lastIndexOf "\\"
+		path.substring 0,parentId
