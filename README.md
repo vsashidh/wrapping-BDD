@@ -8,7 +8,7 @@ This repository contains code which allows cucumber-js BDD framework to be wrapp
 4. `cd bdd`
 5. `yo wrap-bdd`
 
-# Collaborator istructions
+# Collaborator instructions
 All source is written using coffee script. In the root directory use the following:
   `coffee --compile --output lib/ src/`
 
