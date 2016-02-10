@@ -19,5 +19,5 @@
   "directories": {
     "lib": "./lib"
   },
-  "files": [ "features", "Utilities", "lib"]
+  "files": ["Utilities", "lib"]
 }
