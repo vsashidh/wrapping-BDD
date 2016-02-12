@@ -24,14 +24,15 @@ OleTestToolDriver = () ->
 					throw new TypeError 'Invalid environment parameter or value. Fix: set envName=DEV'
 			if not args.testBrowser? 
 				args.testBrowser = process.env.testBrowser
-				if not args.testBrowser?
-					throw new TypeError 'Invalid environment parameter or value. Fix: set testBrowser=chrome'
-
-			browser.launchme args.envName, args.testBrowser, (proc) ->
-				browserinstance = proc
-				debugger
-				cb browserinstance
-				return
+				if args.testBrowser?
+					browser.launchme args.envName, args.testBrowser, (proc) ->
+						browserinstance = proc
+						debugger
+						cb browserinstance
+						return
+				else
+					cb null 
+			
 			return
 
 		# @param paramObj: an object containing information relevant to projectSuite, project, and fullmethodname
