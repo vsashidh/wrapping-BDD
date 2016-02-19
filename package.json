@@ -1,6 +1,6 @@
 {
   "name": "wrap-bdd",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "a behavior driven development framework for test complete projects and any other testing projects",
   "main": "lib/index",
   "scripts": {
